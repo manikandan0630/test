@@ -1,0 +1,169 @@
+.heroMain {
+    background-color: #001F3F;
+}
+
+.heroMain {
+    background: #0A1B35;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Outer Circles */
+.circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 900px;
+    height: 900px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c1 {
+    width: 900px;
+    height: 900px;
+}
+
+.c2 {
+    width: 700px;
+    height: 700px;
+}
+
+.c3 {
+    width: 500px;
+    height: 500px;
+}
+
+.c4 {
+    width: 300px;
+    height: 300px;
+}
+
+/* Floating text badges */
+.badge {
+    position: absolute;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0A1B35;
+}
+
+.badge-1 {
+    background: #FFD6C6;
+    top: 42%;
+    left: 10%;
+}
+
+.badge-2 {
+    background: #C0EDCE;
+    top: 30%;
+    right: 15%;
+}
+
+.badge-3 {
+    background: #FFE6A8;
+    bottom: 20%;
+    right: 25%;
+}
+
+/* Icons on circle */
+.icon-bubble {
+    position: absolute;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.icon-1 {
+    top: 25%;
+    left: 48%;
+}
+
+.icon-2 {
+    top: 55%;
+    right: 12%;
+}
+
+.icon-3 {
+    bottom: 30%;
+    left: 20%;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(251, 251, 252);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 88%;
+    height: 140%;
+    background-color: #001F3F;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.box:hover::before {
+    animation: animate 14s linear infinite;
+    opacity: 1;
+}
+
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background-color: rgb(251, 251, 252);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 16px;
+    z-index: 1;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.inner-box {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+}
